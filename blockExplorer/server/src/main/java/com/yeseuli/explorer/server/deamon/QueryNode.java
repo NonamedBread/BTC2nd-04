@@ -2,13 +2,11 @@ package com.yeseuli.explorer.server.deamon;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.sql.SQLException;
 import java.util.concurrent.Executors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.web3j.protocol.core.DefaultBlockParameter;
-import org.web3j.protocol.core.methods.response.EthBlock;
 import org.web3j.protocol.core.methods.response.EthBlock.Block;
 import org.web3j.protocol.core.methods.response.EthBlock.TransactionObject;
 import org.web3j.protocol.core.methods.response.EthBlock.TransactionResult;
@@ -84,7 +82,7 @@ public class QueryNode {
 				transStatement.setString(2, wrappedObject.getNonce().toString());
 				transStatement.setString(3, wrappedObject.getBlockHash());
 				transStatement.setBigDecimal(4, new BigDecimal(wrappedObject.getBlockNumber()));
-				transStatement.setString(5, wrappedObject.getTransactionIndex().toString());
+				transStatement.setBigDecimal(5, new BigDecimal(wrappedObject.getTransactionIndex()));
 				transStatement.setString(6, wrappedObject.getFrom());
 				transStatement.setString(7, wrappedObject.getTo());
 				transStatement.setString(8, wrappedObject.getValue().toString());
