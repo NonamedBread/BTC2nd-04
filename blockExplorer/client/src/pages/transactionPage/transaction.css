@@ -1,0 +1,38 @@
+
+.transaction-inside-container{
+    margin: 10px;
+    /* background-color: red; */
+    /* display: flex; */
+}
+.transaction-text-box{
+    border:0;
+    outline: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #1B8AB8;
+    background-color: aliceblue;
+    text-align: center;
+}
+.transaction_category{
+    display: flex;
+}
+.TransactionHash{
+    background-color: red;
+    height: 600px;
+    margin: 10px;
+}
+.From{
+    background-color: blue;
+    height: 600px;
+    margin: 10px;
+}
+.To{
+    background-color: Green;
+    height: 600px;
+    margin: 10px;
+}
+.TimeStamp{
+    background-color: violet;
+    height: 600px;
+    margin: 10px;
+}

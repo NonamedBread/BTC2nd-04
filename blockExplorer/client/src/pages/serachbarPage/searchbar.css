@@ -1,0 +1,15 @@
+.searchbar-container{
+    display: flex;
+    /* background-color: yellow; */
+    height : 8vh;
+    width : 99%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    
+}
+
+.search-bar{
+    width: 95%;
+    /* background-color: aqua; */
+}

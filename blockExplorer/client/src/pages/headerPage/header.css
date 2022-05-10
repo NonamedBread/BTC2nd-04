@@ -1,0 +1,47 @@
+.header-container {
+    width: 99%;
+    height: 14vh;
+    position: relative;
+    margin : 10px;
+    
+    display: flex;
+}
+
+.header-logo-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    /* margin-left: auto; */
+    width: 80vw;
+    /* background-color: aqua; */
+}
+
+.heder-logo {
+    display: flex;
+    height: 100%;
+    font-weight: 500;
+}
+
+.logo{
+    margin: 100px;
+    width: auto;
+    height: auto;
+}
+.btn-container {
+    display: flex;
+    height: 100%;
+    justify-content: right;
+    align-items: center;
+    margin-left: 12px;
+    margin-right: 6px;
+    /* margin-left: auto; */
+    width: 20vw;
+    /* background-color:bisque; */
+}
+
+.header-drp-btn {
+    color: blue;
+    margin: 20px;
+}
