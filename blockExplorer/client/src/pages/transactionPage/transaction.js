@@ -12,7 +12,7 @@ function Transaction() {
   async function load_LastTransaction() {
     setlastTransactions_Loading(true);
     await axios.get("http://218.147.82.106:20000/getLastestTransactions?count=5").then((result) => {
-      setLastTransactions(result.data.data);
+      setLastTransactions(result.data);
       setlastTransactions_Loading(false);
     });
   }
