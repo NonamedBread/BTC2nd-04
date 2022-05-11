@@ -9,13 +9,12 @@ function Block() {
 
   useEffect(() => {
     axios
-      .get("http://218.147.82.106:20000/getLastestBlocks?count=7")
+      .get("http://218.147.82.106:20000/getLastestBlocks?count=3")
       .then((response) => {
         setLatestBlocks(response.data);
       });
   }, []);
 
- 
   return (
     <div className="block-inside-container">
       <div className="block-text-box">Latest Block</div>
@@ -26,11 +25,17 @@ function Block() {
       </div>
 
       {latestBlocks.map((e) => (
-        
         <div className="block-category">
-          <div className="blockNumber">{e.Number}</div>
-          <div className="blockMiner">{e.Miner.slice(0,7)+"..."+e.Miner.slice(-3)}</div>
-          <div className="blockHash">{e.Hash.slice(0,7)+"..."+e.Hash.slice(-3)}</div>
+          <div className="blockNumber">
+            {" "}
+            <Link to="/getBlock" state={e.Number}>{e.Number}</Link>
+          </div>
+          <div className="blockMiner">
+            {e.Miner.slice(0, 7) + "..." + e.Miner.slice(-3)}
+          </div>
+          <div className="blockHash">
+            {e.Hash.slice(0, 7) + "..." + e.Hash.slice(-3)}
+          </div>
         </div>
       ))}
       <div className="block-refresh-btn">...</div>

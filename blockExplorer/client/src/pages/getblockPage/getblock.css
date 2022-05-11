@@ -1,0 +1,29 @@
+.getBlock-container {
+    display: flex;
+    /* background-color: brown; */
+    justify-content: center;
+    height: 73vh;
+    width: 99%;
+    margin: 10px;
+}
+
+.getBlock-inside-container{
+     /* background-color: blue; */
+     width: 61%;
+     margin: 10px;
+     border: 1px solid #1B8AB8;
+     border-radius: 7px;
+}
+.block-header{
+    border:0;
+    outline: 0;
+    font-size: 3.0rem;
+    font-weight: 500;
+    color: #1B8AB8;
+    background-color: aliceblue;
+    text-align: center;
+    border: 1px solid #1B8AB8;
+    border-radius: 7px;
+    height: auto;
+    margin: 10px;
+}

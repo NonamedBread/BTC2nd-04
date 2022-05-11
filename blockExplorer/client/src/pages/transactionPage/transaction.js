@@ -11,7 +11,7 @@ function Transaction() {
 
   useEffect(() => {
     axios
-      .get("http://218.147.82.106:20000/getLastestTransactions?count=7")
+      .get("http://218.147.82.106:20000/getLastestTransactions?count=3")
       .then((response) => {
         setLatestTransactions(response.data);
       });
