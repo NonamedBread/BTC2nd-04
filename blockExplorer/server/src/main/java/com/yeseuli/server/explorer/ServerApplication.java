@@ -1,10 +1,10 @@
-package com.yeseuli.explorer.server;
+package com.yeseuli.server.explorer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-import com.yeseuli.explorer.server.deamon.QueryNode;
+import com.yeseuli.server.explorer.deamon.QueryNode;
 
 @EnableWebMvc
 @SpringBootApplication

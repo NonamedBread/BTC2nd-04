@@ -1,4 +1,4 @@
-package com.yeseuli.explorer.server.deamon;
+package com.yeseuli.server.explorer.deamon;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -11,7 +11,7 @@ import org.web3j.protocol.core.methods.response.EthBlock.Block;
 import org.web3j.protocol.core.methods.response.EthBlock.TransactionObject;
 import org.web3j.protocol.core.methods.response.EthBlock.TransactionResult;
 
-import com.yeseuli.explorer.server.GlobalConstants;
+import com.yeseuli.server.explorer.GlobalConstants;
 
 public class QueryNode {
 	private static final Logger logger = LoggerFactory.getLogger(QueryNode.class);
@@ -23,7 +23,7 @@ public class QueryNode {
 		syncInitBlock();
 		storedOldestBlockNumber = getOldestBlockNumber();
 		storedNewestBlockNumber = getNewestBlockNumber();
-		Executors.newSingleThreadExecutor().submit(() -> syncOldBlock());
+		//Executors.newSingleThreadExecutor().submit(() -> syncOldBlock());
 		Executors.newSingleThreadExecutor().submit(() -> syncNewBlock());
 	}
 	
@@ -63,7 +63,7 @@ public class QueryNode {
 		return BigInteger.ZERO;
 	}
 	
-	private synchronized static boolean saveDB(Block block) {
+	private static boolean saveDB(Block block) {
 		if (block == null) {
 			return false;
 		}
@@ -161,6 +161,8 @@ public class QueryNode {
 				if (saveDB(ethBlock.getBlock()) == true) {
 					storedOldestBlockNumber = previousBlockNumber;
 				}
+				
+				Thread.sleep(500);
 			} catch (Exception ex) {
 				logger.error("", ex);
 			}
@@ -176,6 +178,8 @@ public class QueryNode {
 				if (saveDB(ethBlock.getBlock()) == true) {
 					storedNewestBlockNumber = nextBlockNumber;
 				}
+				
+				Thread.sleep(500);
 			} catch (Exception ex) {
 				logger.error("", ex);
 			}

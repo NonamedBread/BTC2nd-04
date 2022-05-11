@@ -1,4 +1,4 @@
-package com.yeseuli.explorer.server;
+package com.yeseuli.server.explorer;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

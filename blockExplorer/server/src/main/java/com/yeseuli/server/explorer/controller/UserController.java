@@ -1,4 +1,4 @@
-package com.yeseuli.explorer.server.controller;
+package com.yeseuli.server.explorer.controller;
 
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.web3j.protocol.core.DefaultBlockParameterName;
 
-import com.yeseuli.explorer.server.GlobalConstants;
-import com.yeseuli.explorer.server.utils.DataConvert;
-import com.yeseuli.explorer.server.vo.request.AccountRequestVo;
-import com.yeseuli.explorer.server.vo.request.BlockRequestVo;
-import com.yeseuli.explorer.server.vo.request.LastestPageRequestVo;
-import com.yeseuli.explorer.server.vo.request.LastestRequestVo;
-import com.yeseuli.explorer.server.vo.request.TransactionRequestVo;
+import com.yeseuli.server.explorer.GlobalConstants;
+import com.yeseuli.server.explorer.utils.DataConvert;
+import com.yeseuli.server.explorer.vo.request.AccountRequestVo;
+import com.yeseuli.server.explorer.vo.request.BlockRequestVo;
+import com.yeseuli.server.explorer.vo.request.LastestPageRequestVo;
+import com.yeseuli.server.explorer.vo.request.LastestRequestVo;
+import com.yeseuli.server.explorer.vo.request.TransactionRequestVo;
 
 @RestController
 public class UserController {
@@ -45,7 +45,7 @@ public class UserController {
 			var selectSql = "SELECT * FROM Blocks ORDER BY Number DESC LIMIT ?, ?";
 			var statement = GlobalConstants.DBConnector.prepareStatement(selectSql);
 			
-			statement.setLong(1, vo.getCountPerPage() * (vo.getPagenum() - 1));
+			statement.setLong(1, vo.getCountPerPage() * (vo.getPageNum() - 1));
 			statement.setLong(2, vo.getCountPerPage());
 			
 			return DataConvert.resultSetToArrayList(statement.executeQuery());
@@ -77,7 +77,7 @@ public class UserController {
 			var selectSql = "SELECT * FROM Transactions ORDER BY BlockNumber DESC, TransactionIndex ASC LIMIT ?, ?";
 			var statement = GlobalConstants.DBConnector.prepareStatement(selectSql);
 			
-			statement.setLong(1, vo.getCountPerPage() * (vo.getPagenum() - 1));
+			statement.setLong(1, vo.getCountPerPage() * (vo.getPageNum() - 1));
 			statement.setLong(2, vo.getCountPerPage());
 			
 			return DataConvert.resultSetToArrayList(statement.executeQuery());

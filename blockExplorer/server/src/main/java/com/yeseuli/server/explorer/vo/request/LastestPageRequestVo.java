@@ -1,7 +1,6 @@
-package com.yeseuli.explorer.server.vo.request;
+package com.yeseuli.server.explorer.vo.request;
 
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.annotations.ApiOperation;
 import lombok.Data;
 
 @Data
@@ -11,6 +10,6 @@ public class LastestPageRequestVo {
 	private long countPerPage;
 	
 	@ApiModelProperty(example = "2")
-	private long pagenum;
+	private long pageNum;
 	
 }

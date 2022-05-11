@@ -1,4 +1,4 @@
-package com.yeseuli.explorer.server;
+package com.yeseuli.server.explorer;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,9 +14,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
-	private static final String API_NAME = "Yeseuli's Explorer";
+	private static final String API_NAME = "Yeseuli's Explorer & Wallet";
     private static final String API_VERSION = "1.0";
-    private static final String API_DESCRIPTION = "Yeseuli's Explorer Swagger";
+    private static final String API_DESCRIPTION = "Yeseuli's Swagger";
 
     @Bean
     public Docket api() {
