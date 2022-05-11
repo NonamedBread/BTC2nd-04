@@ -1,4 +1,4 @@
-package com.yeseuli.server.explorer.utils;
+package com.yeseuli.server.utils;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -1,4 +1,4 @@
-package com.yeseuli.server.explorer.vo.request;
+package com.yeseuli.server.explorer.vo;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

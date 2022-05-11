@@ -1,4 +1,4 @@
-package com.yeseuli.server.explorer;
+package com.yeseuli.server;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,4 +20,5 @@ public class GlobalConstants {
 			System.out.println(ex.getMessage());
 		}
 	}
+	
 }

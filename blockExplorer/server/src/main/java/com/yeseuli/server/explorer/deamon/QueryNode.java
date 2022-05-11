@@ -11,7 +11,7 @@ import org.web3j.protocol.core.methods.response.EthBlock.Block;
 import org.web3j.protocol.core.methods.response.EthBlock.TransactionObject;
 import org.web3j.protocol.core.methods.response.EthBlock.TransactionResult;
 
-import com.yeseuli.server.explorer.GlobalConstants;
+import com.yeseuli.server.GlobalConstants;
 
 public class QueryNode {
 	private static final Logger logger = LoggerFactory.getLogger(QueryNode.class);
@@ -23,7 +23,7 @@ public class QueryNode {
 		syncInitBlock();
 		storedOldestBlockNumber = getOldestBlockNumber();
 		storedNewestBlockNumber = getNewestBlockNumber();
-		//Executors.newSingleThreadExecutor().submit(() -> syncOldBlock());
+		Executors.newSingleThreadExecutor().submit(() -> syncOldBlock());
 		Executors.newSingleThreadExecutor().submit(() -> syncNewBlock());
 	}
 	

@@ -8,23 +8,26 @@ import java.util.List;
 import org.apache.logging.log4j.util.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.web3j.protocol.core.DefaultBlockParameterName;
 
-import com.yeseuli.server.explorer.GlobalConstants;
-import com.yeseuli.server.explorer.utils.DataConvert;
-import com.yeseuli.server.explorer.vo.request.AccountRequestVo;
-import com.yeseuli.server.explorer.vo.request.BlockRequestVo;
-import com.yeseuli.server.explorer.vo.request.LastestPageRequestVo;
-import com.yeseuli.server.explorer.vo.request.LastestRequestVo;
-import com.yeseuli.server.explorer.vo.request.TransactionRequestVo;
+import com.yeseuli.server.GlobalConstants;
+import com.yeseuli.server.explorer.vo.AccountRequestVo;
+import com.yeseuli.server.explorer.vo.BlockRequestVo;
+import com.yeseuli.server.explorer.vo.LastestPageRequestVo;
+import com.yeseuli.server.explorer.vo.LastestRequestVo;
+import com.yeseuli.server.explorer.vo.TransactionRequestVo;
+import com.yeseuli.server.utils.DataConvert;
 
 @RestController
-public class UserController {
+@RequestMapping(consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+public class ExplorerController {
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	@PostMapping("/getLastestBlocks")
+	@PostMapping(value = "/getLastestBlocks")
 	public List<HashMap<String, Object>> getLastestBlocks(LastestRequestVo vo) {
 		try {
 			var selectSql = "SELECT * FROM Blocks ORDER BY Number DESC LIMIT ?";
@@ -39,7 +42,7 @@ public class UserController {
 		return new ArrayList<>();
 	}
 
-	@PostMapping("/getLastestBlocksPage")
+	@PostMapping(value = "/getLastestBlocksPage")
 	public List<HashMap<String, Object>> getLastestBlocksPage(LastestPageRequestVo vo) {
 		try {
 			var selectSql = "SELECT * FROM Blocks ORDER BY Number DESC LIMIT ?, ?";
@@ -56,7 +59,7 @@ public class UserController {
 		return new ArrayList<>();
 	}
 	
-	@PostMapping("/getLastestTransactions")
+	@PostMapping(value = "/getLastestTransactions")
 	public List<HashMap<String, Object>> getLastestTransactions(LastestRequestVo vo) {
 		try {
 			var selectSql = "SELECT * FROM Transactions ORDER BY BlockNumber DESC, TransactionIndex ASC LIMIT ?";
@@ -71,7 +74,7 @@ public class UserController {
 		return new ArrayList<>();
 	}
 	
-	@PostMapping("/getLastestTransactionsPage")
+	@PostMapping(value = "/getLastestTransactionsPage")
 	public List<HashMap<String, Object>> getLastestTransactionsPage(LastestPageRequestVo vo) {
 		try {
 			var selectSql = "SELECT * FROM Transactions ORDER BY BlockNumber DESC, TransactionIndex ASC LIMIT ?, ?";
@@ -88,7 +91,7 @@ public class UserController {
 		return new ArrayList<>();
 	}
 	
-	@PostMapping("/getBlock")
+	@PostMapping(value = "/getBlock")
 	public List<HashMap<String, Object>> getBlock(BlockRequestVo vo) {
 		try {
 			var selectSql = "";
@@ -112,7 +115,7 @@ public class UserController {
 		return new ArrayList<>();
 	}
 	
-	@PostMapping("/getTransaction")
+	@PostMapping(value = "/getTransaction")
 	public List<HashMap<String, Object>> getTransaction(TransactionRequestVo vo) {
 		try {
 			var selectSql = "";
@@ -142,7 +145,7 @@ public class UserController {
 		return new ArrayList<>();
 	}
 	
-	@PostMapping("/getAccount")
+	@PostMapping(value = "/getAccount")
 	public HashMap<String, Object> getAccount(AccountRequestVo vo) {
 		try {
 			var returnValue = new HashMap<String, Object>();

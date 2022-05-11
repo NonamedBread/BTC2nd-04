@@ -1,4 +1,4 @@
-package com.yeseuli.explorer.server;
+package com.yeseuli.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
