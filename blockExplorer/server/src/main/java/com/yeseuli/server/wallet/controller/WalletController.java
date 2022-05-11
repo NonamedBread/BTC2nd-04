@@ -6,6 +6,7 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +24,7 @@ import com.yeseuli.server.wallet.vo.SendTransactionRequestVo;
 public class WalletController {
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	@PostMapping(value = "/getAccountInfo")
+	@GetMapping(value = "/getAccountInfo")
 	public HashMap<String, Object> getAccountInfo(AccountRequestVo vo) {
 		try {
 			var returnValue = new HashMap<String, Object>();
