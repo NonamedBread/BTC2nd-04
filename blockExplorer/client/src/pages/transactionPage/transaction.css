@@ -7,32 +7,74 @@
 .transaction-text-box{
     border:0;
     outline: 0;
-    font-size: 1.3rem;
+    font-size: 3.0rem;
     font-weight: 500;
     color: #1B8AB8;
     background-color: aliceblue;
     text-align: center;
+    border: 1px solid #1B8AB8;
+    border-radius: 7px;
+    height: auto;
 }
-.transaction_category{
+.category-box{
+    display: flex;
+    border:0;
+    outline: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: gray;
+    background-color: aliceblue;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #1B8AB8;
+    border-radius: 7px;
+    height: auto;
+}
+.transaction-category{
     display: flex;
 }
-.TransactionHash{
-    background-color: red;
-    height: 600px;
-    margin: 10px;
+/* -------------------------------------------- */
+.transactionHash-box{
+    margin-left: 4px;
+    margin-right: 20px;
 }
-.From{
-    background-color: blue;
-    height: 600px;
-    margin: 10px;
+.from-box{
+    margin-right: 90px;
 }
-.To{
-    background-color: Green;
-    height: 600px;
-    margin: 10px;
+.to-box{
+    margin-right: 120px;
 }
-.TimeStamp{
-    background-color: violet;
-    height: 600px;
-    margin: 10px;
+
+/* -------------------------------------------- */
+
+.transaction-category{
+    margin-top: 40px;
+    border-bottom: 1px solid #1B8AB8;
+}
+.transactionHash{
+    /* background-color: red; */
+    font-size: 1.3rem;
+    margin-right: 20px;
+    width: 170px;
+}
+.from{
+    /* background-color: blue; */
+    font-size: 1.3rem;
+    margin-right: 20px;
+    width: 120px;
+}
+.to{
+    /* background-color: green; */
+    font-size: 1.3rem;
+    margin-right: 27px;
+    width: 120px;
+}
+.value{
+    /* background-color: aqua; */
+    font-size: 1.3rem;
+}
+
+.transaction-refresh-btn{
+    text-align: center;
+    font-size: 3.0rem;
 }

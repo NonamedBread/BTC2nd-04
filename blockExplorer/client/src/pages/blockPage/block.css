@@ -1,6 +1,78 @@
-.block-container{
-    background-color: rgb(106, 255, 0);
-    width: 50%;
+.block-inside-container{
     margin: 10px;
-    
+    /* background-color: red; */
+    /* display: flex; */
 }
+.block-text-box{
+    border:0;
+    outline: 0;
+    font-size: 3.0rem;
+    font-weight: 500;
+    color: #1B8AB8;
+    background-color: aliceblue;
+    text-align: center;
+    border: 1px solid #1B8AB8;
+    border-radius: 7px;
+    height: auto;
+}
+.block-category-box{
+    display: flex;
+    border:0;
+    outline: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: gray;
+    background-color: aliceblue;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #1B8AB8;
+    border-radius: 7px;
+    height: auto;
+}
+
+/* ---------------- */
+.blocknumber-box{
+    margin-left: 4px;
+    margin-right: 60px;
+}
+.miner-box{
+    margin-right: 120px;
+}
+.blockhash-box{
+    margin-right: 20px;
+}
+
+/* ----------------- */
+
+.block-category{
+    margin-top: 40px;
+    border-bottom: 1px solid #1B8AB8;
+    display: flex;
+}
+.blockNumber{
+    /* background-color: red; */
+    font-size: 1.3rem;
+    margin-right: 60px;
+    width: 140px;
+}
+
+.blockMiner{
+    /* background-color: green; */
+    font-size: 1.3rem;
+    margin-right: 60px;
+    width: 120px;
+}
+
+.blockHash{
+    /* background-color: blue; */
+    font-size: 1.3rem;
+    margin-right: 20px;
+    width: 165px;
+}
+
+.block-refresh-btn{
+    
+    text-align: center;
+    font-size: 3.0rem;
+}
+
