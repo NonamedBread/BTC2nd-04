@@ -5,11 +5,11 @@
     width : 99%;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin:  auto;
     
 }
 
 .search-bar{
-    width: 95%;
+    width: 80%;
     /* background-color: aqua; */
 }

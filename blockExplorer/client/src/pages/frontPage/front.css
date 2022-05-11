@@ -1,14 +1,23 @@
 .front-container{
     display: flex;
     /* background-color: brown; */
+    justify-content: center;
     height: 73vh;
     width: 99%;
     margin: 10px;
 }
 .transaction-container{
     /* background-color: blue; */
-    width: 50%;
+    width: 30%;
     margin: 10px;
     border: 1px solid #1B8AB8;
     border-radius: 7px;
+}
+.block-container{
+    /* background-color: rgb(106, 255, 0); */
+    width: 30%;
+    margin: 10px;
+    border: 1px solid #1B8AB8;
+    border-radius: 7px;
+    
 }

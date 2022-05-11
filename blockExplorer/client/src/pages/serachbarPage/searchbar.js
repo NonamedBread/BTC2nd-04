@@ -15,20 +15,26 @@ function Searchbar() {
     <div className="searchbar-container">
       <div>
         <Box
+          display="flex"
           component="form"
           sx={{
             "& > :not(style)": { m: 1, width: "25ch" },
           }}
+          
           noValidate
           autoComplete="off"
           className="search-bar"
-          style={{ width: 1900 }}
+          style={{ width: 1900}}
+          justifyContent="center"
+          alignItems="center"
+          
+
         >
           <TextField
             id="standard-basic"
             label="Fill in the address/transaction/hash/block values and press the Enter key"
             variant="standard"
-            style={{ width: 1890 }}
+            style={{ width: 1150 }}
             onChange={textChange}
             onKeyPress={(e) => {
               if (e.key === "Enter") {

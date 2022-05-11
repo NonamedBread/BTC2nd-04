@@ -19,7 +19,7 @@ function Header() {
             }
           />
         </Link>
-      </div>
+      
 
       <div className="btn-container">
         <Box sx={{ minWidth: 120 }} className="header-drp-btn">
@@ -69,6 +69,7 @@ function Header() {
             </Link>
           </Dropdown.Item>
         </DropdownButton> */}
+      </div>
       </div>
     </div>
   );
