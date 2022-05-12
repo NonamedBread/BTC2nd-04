@@ -1,0 +1,94 @@
+.address-container {
+    display: flex;
+    /* background-color: brown; */
+    justify-content: center;
+    height: 73vh;
+    width: 99%;
+    margin: 10px;
+}
+
+.address-inside-container{
+     /* background-color: blue; */
+     width: 61%;
+     margin: 10px;
+     border: 1px solid #1B8AB8;
+     border-radius: 7px;
+}
+.address-header{
+    border:0;
+    outline: 0;
+    font-size: 3.0rem;
+    font-weight: 500;
+    color: #1B8AB8;
+    background-color: aliceblue;
+    text-align: center;
+    border: 1px solid #1B8AB8;
+    border-radius: 7px;
+    height: auto;
+    margin: 10px;
+}
+
+.address-info-box div{
+    /* background-color: red; */
+    margin: 10px;
+    margin-top: 24px;
+    /* border-bottom : 1px solid #1B8AB8; */
+    font-size: 1.4rem;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul.pagination li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  ul.pagination li:first-child{
+    border-radius: 5px 0 0 5px;
+  }
+
+  ul.pagination li:last-child{
+    border-radius: 0 5px 5px 0;
+  }
+  
+  ul.pagination li a {
+    text-decoration: none;
+    color: #337ab7;
+    font-size: 1rem;
+  }
+  
+  ul.pagination li.active a {
+    color: white;
+  }
+
+  ul.pagination li.active {
+    background-color: #337ab7;
+  }
+  
+  ul.pagination li a:hover,
+  ul.pagination li a.active {
+    color: blue;
+  }
+  
+  .page-selection {
+    width: 48px;
+    height: 30px;
+    color: #337ab7;
+  }
+

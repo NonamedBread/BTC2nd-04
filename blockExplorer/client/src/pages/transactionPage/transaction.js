@@ -11,7 +11,7 @@ function Transaction() {
 
   useEffect(() => {
     axios
-      .get("http://218.147.82.106:20000/getLastestTransactions?count=7")
+      .get("http://3.85.67.189:20000/getLastestTransactions?count=1")
       .then((response) => {
         setLatestTransactions(response.data);
       });
@@ -30,12 +30,16 @@ function Transaction() {
       </div>
       {latestTransactions.map((e) => (
         <div className="transaction-category">
-
-          <div className="transactionHash">{e.Hash.slice(0, 9) + "..."}</div>
-          <div className="from">{e.From.slice(0, 5) + "..." +e.From.slice(-3)}</div>
-          <div className="to">{e.To.slice(0, 3) + "..." +e.To.slice(-3)}</div>
-          <div className="value">{e.Value.slice(0, 3)+"..."}</div>
-
+          <div className="transactionHash">
+            <Link to="/getTransaction" state={e.Hash}>
+              {e.Hash.slice(0, 5) + "..." + e.Hash.slice(-3)}
+            </Link>
+          </div>
+          <div className="from">
+            {e.From.slice(0, 5) + "..." + e.From.slice(-3)}
+          </div>
+          <div className="to">{e.To.slice(0, 3) + "..." + e.To.slice(-3)}</div>
+          <div className="value">{e.Value.slice(0, 3) + "..."}</div>
         </div>
       ))}
       <div className="transaction-refresh-btn">...</div>
