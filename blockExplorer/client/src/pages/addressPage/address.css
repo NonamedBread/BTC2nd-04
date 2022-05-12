@@ -1,4 +1,4 @@
-.getBlock-container {
+.address-container {
     display: flex;
     /* background-color: brown; */
     justify-content: center;
@@ -7,14 +7,14 @@
     margin: 10px;
 }
 
-.getBlock-inside-container{
+.address-inside-container{
      /* background-color: blue; */
      width: 61%;
      margin: 10px;
      border: 1px solid #1B8AB8;
      border-radius: 7px;
 }
-.block-header{
+.address-header{
     border:0;
     outline: 0;
     font-size: 3.0rem;
@@ -28,8 +28,8 @@
     margin: 10px;
 }
 
-.block-info-box div{
-    /* background-color: red; */
+.address-info-box div{
+    background-color: red;
     margin: 10px;
     margin-top: 24px;
     border-bottom : 1px solid #1B8AB8;

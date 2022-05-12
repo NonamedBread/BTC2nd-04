@@ -9,7 +9,7 @@ function Block() {
 
   useEffect(() => {
     axios
-      .get("http://218.147.82.106:20000/getLastestBlocks?count=3")
+      .get("http://3.85.67.189:20000/getLastestBlocks?count=1")
       .then((response) => {
         setLatestBlocks(response.data);
       });
@@ -27,7 +27,6 @@ function Block() {
       {latestBlocks.map((e) => (
         <div className="block-category">
           <div className="blockNumber">
-            {" "}
             <Link to="/getBlock" state={e.Number}>{e.Number}</Link>
           </div>
           <div className="blockMiner">
