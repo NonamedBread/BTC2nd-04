@@ -1,0 +1,30 @@
+.front-container{
+    /* display: flex; */
+    /* background-color: brown; */
+    justify-content: center;
+    text-align: center;
+}
+.front-inside-container{
+    
+    
+    /* background-color: brown; */
+    /* display: inline-block; */
+}
+.front-intro-box{
+    /* background-color: aqua; */
+    height: 22vh;
+    margin-top: 4vh;
+    
+}
+
+.front-btn-box{
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+}
+
+.front-btn{
+    /* background-color: beige; */
+    margin: 15px;
+}

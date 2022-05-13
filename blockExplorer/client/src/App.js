@@ -5,6 +5,8 @@ import Front from './pages/frontPage/front';
 import Getblock from './pages/getblockPage/getblock';
 import GetTransaction from './pages/gettansactionPage/getTransaction';
 import Address from './pages/addressPage/address';
+import BlockHash from './pages/blockHashPage/blockHash';
+import TransactionHash from './pages/transactionHashPage/transactionHash';
 
 
 
@@ -17,6 +19,8 @@ function App() {
         <Route path="/getBlock" element={<Getblock/>}/>
         <Route path="/getTransaction" element={<GetTransaction/>}/>
         <Route path="/address" element={<Address/>}/>
+        <Route path="/blockHash" element={<BlockHash/>}/>
+        <Route path="/transactionHash" element={<TransactionHash/>}/>
       </Routes>
     </BrowserRouter>
   );
