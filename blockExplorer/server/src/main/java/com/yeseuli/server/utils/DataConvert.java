@@ -19,6 +19,15 @@ public class DataConvert {
 			var row = new HashMap<String, Object>(columns);
 			
 			for(int i = 1; i <= columns; ++i){
+				if ("Input".equals(md.getColumnName(i)) == true) {
+					continue;
+				}
+				
+				if (rs.getObject(i) == null) {
+					row.put(md.getColumnName(i), "");
+					continue;
+				}
+				
 				if ("Value".equals(md.getColumnName(i)) == true) {
 					row.put("Value", org.web3j.utils.Convert.fromWei(rs.getString(i), Convert.Unit.ETHER).toString());
 				} else {
