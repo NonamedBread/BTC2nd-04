@@ -82,21 +82,21 @@
 
 **니모닉 생성**
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled.png)
+![Untitled](README_image/Untitled.png)
 
 **니모닉 지갑 생성**
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%201.png)
+![Untitled](README_image/Untitled%201.png)
 
 **지갑 불러오기**
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%202.png)
+![Untitled](README_image/Untitled%202.png)
 
 ---
 
 ### 지갑 다운로드
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%203.png)
+![Untitled](README_image/Untitled%203.png)
 
 ---
 
@@ -104,23 +104,23 @@
 
 **트랜잭션 생성**
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%204.png)
+![Untitled](README_image/Untitled%204.png)
 
 **트랜잭션 전송**
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%205.png)
+![Untitled](README_image/Untitled%205.png)
 
 ---
 
 ### 잔액 및 트랜잭션 기록 조회
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%206.png)
+![Untitled](README_image/Untitled%206.png)
 
 ---
 
 ### 예상 가스 조회
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%207.png)
+![Untitled](README_image/Untitled%207.png)
 
 ### 탐색기
 
@@ -157,31 +157,31 @@
 
 **화면**
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%208.png)
+![Untitled](README_image/Untitled%208.png)
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%209.png)
+![Untitled](README_image/Untitled%209.png)
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%2010.png)
+![Untitled](README_image/Untitled%2010.png)
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%2011.png)
+![Untitled](README_image/Untitled%2011.png)
 
 ### 데몬
 
 일정시간 마다 블록체인 네트워크에 RPC 질의하여 새로운 블록을 탐지하고, 정보를 추출한 뒤 데이터베이스에 저장하는 프로그램
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%2012.png)
+![Untitled](README_image/Untitled%2012.png)
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%2013.png)
+![Untitled](README_image/Untitled%2013.png)
 
 **DB 설계**
 
 - Blocks 테이블
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%2014.png)
+![Untitled](README_image/Untitled%2014.png)
 
 - Transactions 테이블
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%2015.png)
+![Untitled](README_image/Untitled%2015.png)
 
 ### API 리스트
 
@@ -189,11 +189,11 @@
 
 **월렛**
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%2016.png)
+![Untitled](README_image/Untitled%2016.png)
 
 **탐색기**
 
-![Untitled](4%E1%84%90%E1%85%B5%E1%86%B7%2084b81b66f6ff439bb1de2b9c98e5fcbd/Untitled%2017.png)
+![Untitled](README_image/Untitled%2017.png)
 
 ### 마치고 난 후
 
