@@ -20,7 +20,7 @@ import com.yeseuli.server.wallet.vo.AccountRequestVo;
 import com.yeseuli.server.wallet.vo.SendTransactionRequestVo;
 
 @RestController
-@RequestMapping(consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 public class WalletController {
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -48,7 +48,7 @@ public class WalletController {
 	}
 	
 	
-	@PostMapping("/sendTransaction")
+	@GetMapping("/sendTransaction")
 	public HashMap<String, Object> sendTransaction(SendTransactionRequestVo vo) {
 		try {
 			var returnValue = new HashMap<String, Object>(Map.of("success", false));
@@ -75,7 +75,7 @@ public class WalletController {
 		return new HashMap<>();
 	}
 	
-	@PostMapping("/getEstimateGas")
+	@GetMapping("/getEstimateGas")
 	public HashMap<String, Object> getEstimateGas(SendTransactionRequestVo vo) {
 		try {
 			var returnValue = new HashMap<String, Object>();
@@ -89,14 +89,25 @@ public class WalletController {
 						inf.getGasLimit(), 
 						inf.getTo(), 
 						inf.getValue());
-				var ethEstimateGas = GlobalConstants.Provider.ethEstimateGas(commonTransaction).send().getResult();
-				var ethGasPrice = GlobalConstants.Provider.ethGasPrice().send().getResult();
+				var ethEstimateGasSend = GlobalConstants.Provider.ethEstimateGas(commonTransaction).send();
+				
+				if (ethEstimateGasSend.getError() != null) {
+					returnValue.put("error", ethEstimateGasSend.getError());
+					return returnValue;
+				}
+				
+				var ethEstimateGas = ethEstimateGasSend.getAmountUsed();
+				var ethGasPrice = GlobalConstants.Provider.ethGasPrice().send().getGasPrice();
 				
 				returnValue.put("estGas", ethEstimateGas);
 				returnValue.put("gasPrice", ethGasPrice);
 				
 				return returnValue;
-			} catch (Exception ex) {}
+			} catch (Exception ex) {
+				returnValue.put("error", ex.getMessage());
+				
+				return returnValue;
+			}
 		} catch (Exception ex) {
 			logger.error("", ex);
 		}
