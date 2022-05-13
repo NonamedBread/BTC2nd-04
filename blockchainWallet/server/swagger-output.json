@@ -1,0 +1,200 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Yeseuli's Explorer & Wallet",
+    "description": "Yeseuli's Swagger",
+    "version": "1.0.0"
+  },
+  "host": "localhost:20001",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/startApp": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "password",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/getNewMnemonic": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/getNewWalletFromMnemoic": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "password",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "mnemonic",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/getAccountList": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/getAccountInfo": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "address",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/downloadWallet": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "password",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/uploadWallet": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "encodedKeysotre",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/getEstimateGas": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "encodedTransaction",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/getNewTransaction": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "from",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "value",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/sendTransaction": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "encodedTransaction",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

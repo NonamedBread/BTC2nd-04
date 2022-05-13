@@ -11,13 +11,16 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
-    "axis": "^1.0.0",
     "bip39": "^3.0.4",
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "fs": "^0.0.1-security",
     "hdkey": "^2.0.1",
-    "method-override": "^3.0.0",
-    "web3": "^1.7.3",
-    "web3-eth-accounts": "^1.7.3"
+    "swagger-autogen": "^2.21.1",
+    "web3": "^1.7.3"
+  },
+  "devDependencies": {
+    "swagger-jsdoc": "^6.2.1",
+    "swagger-ui-express": "^4.3.0"
   }
 }
