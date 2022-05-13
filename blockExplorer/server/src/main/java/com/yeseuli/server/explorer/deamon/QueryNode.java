@@ -162,7 +162,7 @@ public class QueryNode {
 					storedOldestBlockNumber = previousBlockNumber;
 				}
 				
-				Thread.sleep(500);
+				Thread.sleep(2000);
 			} catch (Exception ex) {
 				logger.error("", ex);
 			}
@@ -179,7 +179,7 @@ public class QueryNode {
 					storedNewestBlockNumber = nextBlockNumber;
 				}
 				
-				Thread.sleep(500);
+				Thread.sleep(2000);
 			} catch (Exception ex) {
 				logger.error("", ex);
 			}
