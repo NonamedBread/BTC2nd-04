@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.web3j.protocol.core.DefaultBlockParameterName;
+import org.web3j.utils.Convert;
 
 import com.yeseuli.server.GlobalConstants;
 import com.yeseuli.server.explorer.vo.AccountRequestVo;
@@ -157,7 +158,7 @@ public class ExplorerController {
 			
 			transactionVo.setFromOrTo(vo.getAddress());
 			
-			returnValue.put("balance", ethBalance.getBalance().toString());
+			returnValue.put("balance", org.web3j.utils.Convert.fromWei(ethBalance.getBalance().toString(), Convert.Unit.ETHER).toString());
 			returnValue.put("transactions", getTransaction(transactionVo));
 			
 			return returnValue;
