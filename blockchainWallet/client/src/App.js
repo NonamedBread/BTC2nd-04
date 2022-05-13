@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./pages/headerPage/header";
+import WalletHeader from "./pages/headerPage/header";
+import Front from "./pages/frontPage/front";
+import CreateWallet from "./pages/createWalletPage/createWallet";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <WalletHeader />
+        <div className="app-box">
+        
+        <Routes>
+          <Route path="/" element={<Front />}/>
+          <Route path="/createWallet" element={<CreateWallet/>}/>
+        </Routes>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }

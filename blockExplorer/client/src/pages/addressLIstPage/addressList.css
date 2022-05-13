@@ -5,3 +5,57 @@
     border-bottom : 1px solid #1B8AB8;
     font-size: 1.4rem;
 }
+.addressList-header{
+    display: flex;
+    text-align: center;
+    margin : 10px;
+    background-color: aliceblue;
+    border :  1px solid #1B8AB8;
+    border-radius: 7px;
+}
+.txnHash-box , .block-box, .addressList-from-box, .addressList-to-box, .addressList-value-box{
+    margin: 4px;
+    font-size: 1.4rem;
+
+}
+.txnHash-box{
+    margin-right: 170px;
+   
+}
+.block-box{
+    margin-right: 70px ;
+}
+.addressList-from-box{
+    margin-right: 200px;
+}
+.addressList-to-box{
+    margin-right: 220px;
+
+}
+
+.address-inline-box{
+    /* background-color: rebeccapurple; */
+    margin:10px;
+    font-size: 1.3rem;
+    display: flex;
+    border-bottom: 1px solid #1B8AB8;;
+}
+.txnHash-map-box{
+    /* background-color: red; */
+    width: 270px;
+}
+.blocklock-map-box{
+    /* background-color: blue; */
+    width: 130px;
+}
+.addressList-from-map-box{
+    /* background-color: yellow; */
+    width: 260px;
+}
+.addressList-to-map-box{
+    /* background-color: green; */
+    width: 250px;
+}
+.addressList-value-map-box{
+    /* background-color: aqua; */
+}
