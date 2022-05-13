@@ -17,8 +17,7 @@ const app = express();
 const Eth = new Web3(PROVIDER).eth;
 const Wallet = Eth.accounts.wallet;
 
-//var _LoadedWallet;
-var _LoadedWallet = loadWallet("1234");
+var _LoadedWallet;
 var _nonceBaseInt = 0;
 
 app.use(cors());
@@ -34,6 +33,10 @@ app.get("/startApp", (req, res) => {
         
         let loadedWallet = loadWallet(password);
 
+        if (!loadedWallet) {
+            res.send({ error: "not have" });
+            return;
+        }
         _LoadedWallet = loadedWallet;
 
         res.send({
