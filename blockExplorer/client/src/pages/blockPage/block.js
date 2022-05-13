@@ -9,7 +9,7 @@ function Block() {
 
   useEffect(() => {
     axios
-      .get("http://3.85.67.189:20000/getLastestBlocks?count=1")
+      .get("http://218.147.82.106:20000/getLastestBlocks?count=7")
       .then((response) => {
         setLatestBlocks(response.data);
       });
